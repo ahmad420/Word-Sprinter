@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TextDisplay from './TextDisplay';
 import Timer from './Timer';
+import '../App.css';
 
 const texts = [
   "The quick brown fox jumps over the lazy dog.",
@@ -32,6 +33,7 @@ const Game: React.FC = () => {
   };
 
   return (
+  <div className='game1'>
     <div className="game-container">
       <h1>SwiftType Challenge</h1>
       <TextDisplay text={texts[currentTextIndex]} onCompletion={handleTextCompletion} typedText={typedText} />
@@ -44,6 +46,8 @@ const Game: React.FC = () => {
         placeholder="Start typing..."
       />
     </div>
+  </div>
+
   );
 };
 
